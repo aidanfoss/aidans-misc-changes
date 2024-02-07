@@ -114,7 +114,6 @@ public class CustomTrades {
                                 new ItemStack(Items.EMERALD, random.nextBetweenExclusive(30,50)),
                                 sneakBook,
                                 1,6,0.05f)));
-
                     });
             //smithing template
             TradeOfferHelper.registerWanderingTraderOffers(1,
@@ -123,7 +122,6 @@ public class CustomTrades {
                                 new ItemStack(Items.EMERALD, random.nextBetweenExclusive(30,50)),
                                 smithTemplate,
                                 1,6,0.05f)));
-
                     });
         }
         //TradeOfferHelper.registerWanderingTraderOffers( //level, factory);
