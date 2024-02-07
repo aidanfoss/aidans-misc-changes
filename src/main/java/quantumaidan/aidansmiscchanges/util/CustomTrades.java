@@ -5,16 +5,16 @@ import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
+//import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.potion.PotionUtil;
+//import net.minecraft.potion.PotionUtil;
 import net.minecraft.village.TradeOffer;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static net.minecraft.enchantment.Enchantments.*;
+//import static net.minecraft.enchantment.Enchantments.*;
 
 public class CustomTrades {
 //I indented some shit kinda weird here. Might reformat it later. I think it makes more sense like this. sorry if anyone else sees this and cant understand it!
