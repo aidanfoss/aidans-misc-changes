@@ -42,28 +42,24 @@ public class CustomTrades {
         }
 
 //Limited Items
-    static ItemStack sneakBook = new ItemStack(Items.BOOK, 1);
+    static ItemStack sneakBook = new ItemStack(Items.ENCHANTED_BOOK, 1);
         public static void setSneakBook(ItemStack sneakBook) {
             CustomTrades.sneakBook = sneakBook;
             Map<Enchantment, Integer> map = new HashMap<>();
             map.put(Enchantments.SWIFT_SNEAK, 3);
             EnchantmentHelper.set(map, sneakBook);
         }
+
+    static ItemStack smithTemplate = new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1);
     //static ItemStack arrowLevitation = new ItemStack(Items.TIPPED_ARROW, 16);
-
-
-
-
-
-
-/* cant figure out how to do this
-    public static void setArrowLevitation(ItemStack arrowLevitation) {
-        CustomTrades.arrowLevitation = arrowLevitation;
-        Map<Enchantment, Integer> map = new HashMap<>();
-        PotionUtil.setPotion(arrowLevitation, PotionUtil.getPotion(LEVITATION));
-        EnchantmentHelper.set(map, arrowLevitation);
-    }
-*/
+        /* cant figure out how to do this
+        public static void setArrowLevitation(ItemStack arrowLevitation) {
+            CustomTrades.arrowLevitation = arrowLevitation;
+            Map<Enchantment, Integer> map = new HashMap<>();
+            PotionUtil.setPotion(arrowLevitation, PotionUtil.getPotion(LEVITATION));
+            EnchantmentHelper.set(map, arrowLevitation);
+        }
+        */
 
     public static void registerCustomTrades() {
         boolean illegalItems = true; //make sub setting to disable illegal items
@@ -74,7 +70,7 @@ public class CustomTrades {
             TradeOfferHelper.registerWanderingTraderOffers(1,
                     factories -> {
                         factories.add(((entity, random) -> new TradeOffer(
-                                new ItemStack(Items.NETHERITE_INGOT, random.nextBetweenExclusive(4,8)),
+                                new ItemStack(Items.NETHERITE_INGOT, random.nextBetweenExclusive(6,10)),
                                 protElytra,
                                 1,6,0.05f)));
 
@@ -125,7 +121,7 @@ public class CustomTrades {
                     factories -> {
                         factories.add(((entity, random) -> new TradeOffer(
                                 new ItemStack(Items.EMERALD, random.nextBetweenExclusive(30,50)),
-                                sneakBook,
+                                smithTemplate,
                                 1,6,0.05f)));
 
                     });
