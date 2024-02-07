@@ -11,10 +11,16 @@ public class AidansMiscChanges implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		boolean customTradesToggle = true; //change this to call from config file if I ever figure that out.
+		//change this to call from config file if I ever figure that out.
+		boolean customTradesToggle = true;
+		boolean customCraftsToggle = true;
 
 		if (customTradesToggle){
 			CustomTrades.registerCustomTrades();
+		}
+		if (customCraftsToggle){
+			//9 string for a cobweb
+			//wool block in the center for a dispenser
 		}
 
 		LOGGER.info("Hello Fabric world!");
