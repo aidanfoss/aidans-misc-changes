@@ -2,12 +2,15 @@ package quantumaidan.aidansmiscchanges;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
+import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.fabricmc.fabric.api.registry.TillableBlockRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.Pair;
+import net.minecraft.world.GameRules;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import quantumaidan.aidansmiscchanges.util.CustomDrops;
@@ -19,18 +22,26 @@ import java.util.function.Predicate;
 
 public class AidansMiscChanges implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("aidans-misc-changes");
-	public  Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> TILLING_ACTIONS; // Here is the Map
 	@Override
 	public void onInitialize() {
 		//TODO change this to call from config file if I ever figure that out.
-		boolean customTradesToggle = true;
-		boolean customsDropsToggle = true;
-		if (customTradesToggle){
+//		final GameRules.Key<GameRules.BooleanRule> illegalItems =
+//				GameRuleRegistry.register("wanderingTrades-IllegalItems", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
+//		final GameRules.Key<GameRules.BooleanRule> toggleProtElytra =
+//				GameRuleRegistry.register("wanderingTrades-ProtElytra", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(false));
+//		final GameRules.Key<GameRules.BooleanRule> limitedItems =
+//				GameRuleRegistry.register("wanderingTrades-LimitedItems", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
+//		final GameRules.Key<GameRules.BooleanRule> toggleWanderingSherds =
+//				GameRuleRegistry.register("wanderingTrades-Sherds", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
+
+//		boolean customTradesToggle = true;
+//		boolean customsDropsToggle = true;
+//		if (customTradesToggle){
 			CustomTrades.registerCustomTrades();
-		}
-		if (customsDropsToggle){
+//		}
+//		if (customsDropsToggle){
 			CustomDrops.addAll();
-		}
+//		}
 
 
 //		boolean customCraftsToggle = true; TODO make this work if possible. Might have to do some weird shit to make it work. might not be possible
