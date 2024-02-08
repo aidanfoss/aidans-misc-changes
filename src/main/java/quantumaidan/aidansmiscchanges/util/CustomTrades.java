@@ -64,17 +64,20 @@ public class CustomTrades {
     public static void registerCustomTrades() {
         boolean illegalItems = true; // TODO make sub setting to disable illegal items
         boolean limitedItems = true;
-
+        boolean toggleProtElytra = false;
         if (illegalItems){
-            setProtElytra(protElytra); //init protection elytra
-            TradeOfferHelper.registerWanderingTraderOffers(1,
+            if (toggleProtElytra){ //todo make gamerule or setting here
+                setProtElytra(protElytra); //init protection elytra
+                TradeOfferHelper.registerWanderingTraderOffers(1,
                     factories -> {
                         factories.add(((entity, random) -> new TradeOffer(
                                 new ItemStack(Items.NETHERITE_INGOT, random.nextBetweenExclusive(6,10)),
                                 protElytra,
                                 1,6,0.05f)));
 
-                    });
+                    }
+                );
+            }
             setLootingAxe(lootingAxe);
             TradeOfferHelper.registerWanderingTraderOffers(1,
                     factories -> {
