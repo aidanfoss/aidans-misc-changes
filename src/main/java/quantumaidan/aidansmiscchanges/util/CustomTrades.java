@@ -6,6 +6,8 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 //import net.minecraft.item.Item;
+import net.minecraft.item.EnchantedGoldenAppleItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 //import net.minecraft.potion.PotionUtil;
@@ -51,6 +53,7 @@ public class CustomTrades {
         }
 
     static ItemStack smithTemplate = new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1);
+    static ItemStack godApple = new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 1);
     //static ItemStack arrowLevitation = new ItemStack(Items.TIPPED_ARROW, 16);
         /* cant figure out how to do this TODO make levitation arrows work
         public static void setArrowLevitation(ItemStack arrowLevitation) {
@@ -124,6 +127,15 @@ public class CustomTrades {
                         factories.add(((entity, random) -> new TradeOffer(
                                 new ItemStack(Items.EMERALD, random.nextBetweenExclusive(30,50)),
                                 smithTemplate,
+                                1,6,0.05f)));
+                    });
+
+            //God Apple
+            TradeOfferHelper.registerWanderingTraderOffers(1,
+                    factories -> {
+                        factories.add(((entity, random) -> new TradeOffer(
+                                new ItemStack(Items.GOLD_BLOCK, random.nextBetweenExclusive(6,16)),
+                                godApple,
                                 1,6,0.05f)));
                     });
         }
