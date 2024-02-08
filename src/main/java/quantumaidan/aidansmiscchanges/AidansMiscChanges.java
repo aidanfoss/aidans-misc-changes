@@ -12,7 +12,7 @@ public class AidansMiscChanges implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		//change this to call from config file if I ever figure that out.
+		//TODO change this to call from config file if I ever figure that out.
 		boolean customTradesToggle = true;
 		boolean customCraftsToggle = true;
 		boolean customsDropsToggle = true;

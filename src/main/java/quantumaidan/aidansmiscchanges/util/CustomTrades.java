@@ -52,7 +52,7 @@ public class CustomTrades {
 
     static ItemStack smithTemplate = new ItemStack(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, 1);
     //static ItemStack arrowLevitation = new ItemStack(Items.TIPPED_ARROW, 16);
-        /* cant figure out how to do this
+        /* cant figure out how to do this TODO make levitation arrows work
         public static void setArrowLevitation(ItemStack arrowLevitation) {
             CustomTrades.arrowLevitation = arrowLevitation;
             Map<Enchantment, Integer> map = new HashMap<>();
@@ -62,7 +62,7 @@ public class CustomTrades {
         */
 
     public static void registerCustomTrades() {
-        boolean illegalItems = true; //make sub setting to disable illegal items
+        boolean illegalItems = true; // TODO make sub setting to disable illegal items
         boolean limitedItems = true;
 
         if (illegalItems){
