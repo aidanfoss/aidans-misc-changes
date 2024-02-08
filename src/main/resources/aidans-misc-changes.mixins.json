@@ -3,7 +3,6 @@
 	"package": "quantumaidan.aidansmiscchanges.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"MixinAnvilScreen"
 	],
 	"injectors": {
 		"defaultRequire": 1
