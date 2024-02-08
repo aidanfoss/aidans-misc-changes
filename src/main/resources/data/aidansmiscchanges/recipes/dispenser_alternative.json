@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:cobblestone"
-    },
-    "R": {
-      "item": "minecraft:redstone"
+      "item": "minecraft:stick"
     },
     "X": {
-      "tag": "minecraft:wool"
+      "item": "minecraft:string"
+    },
+    "D": {
+      "item": "minecraft:dropper"
     }
   },
   "pattern": [
-    "###",
-    "#X#",
-    "#R#"
+    " #X",
+    "#DX",
+    " #X"
   ],
   "result": {
     "item": "minecraft:dispenser"
